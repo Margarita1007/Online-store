@@ -1,0 +1,135 @@
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: max-content;
+    box-shadow: 0 0 1em rgba(124, 203, 200, .8);
+    transition: 0.3s;
+} 
+
+.card:hover {
+    box-shadow: 0 0 1em rgba(0, 0, 0, .8);
+}
+
+.card__photo {
+    display: flex;
+    box-sizing: content-box;
+    position: relative;
+    background: black;
+}
+
+.card__photo:hover .card__photo_img {
+    opacity: 0.4;
+    transition: opacity .7s;
+}
+
+.card__photo:not(:hover) .card__photo_img {
+    opacity: 1;
+    transition: opacity .7s;
+}
+
+.card__photo:hover .loupe_container,
+.card__photo:hover .loupe_img {
+    opacity: 1;
+    transition: opacity .7s;
+    cursor: pointer;
+}
+
+.card__photo:not(:hover) .loupe_container,
+.card__photo:not(:hover) .loupe_img {
+    opacity: 0;
+    transition: opacity .4s;
+}
+
+.loupe_container {
+    position: absolute;
+    top: calc(50% - 1rem);
+    left: calc(50% - 1rem);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+    background: #7ccbc8;
+    opacity: 0;
+}
+
+.loupe_img {
+    width: 1rem;
+    height: 1rem;
+    position: relative;
+    top: 25%;
+    left: 25%;
+    opacity: 0;
+}
+
+.card__photo_img {
+    width: 100%;
+}
+
+
+.card__description {
+    display: grid;
+    grid-template-areas: 
+    "A A"
+    "B B"
+    "C D";
+    grid-template-columns: 1fr 1fr;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.5rem;
+}
+
+.card__description_name {
+    grid-area: A;
+    text-align: center;
+    margin: 5% 0 2% 0; 
+}
+
+.card__description_price {
+    grid-area: C;
+    text-align: start;
+    margin: 5% 0 5% 10%;
+}
+
+.card__description_more {
+    grid-area: B;
+    text-align: center;
+    text-decoration: underline 1px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: smaller;
+    margin: 2%;
+}
+
+.card__description_more:hover {
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.inCart {
+    grid-area: D;
+    margin: 5% 10% 5% 0;
+    text-align: end;
+}
+
+.add {
+    grid-area: D;
+    border: none;
+    border-radius:40px;
+    width: 40px;
+    height: 40px;
+    align-self: center;
+    justify-self: end;
+    margin-right: 10%;
+    background: none;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0 10% 5% 0;
+}
+
+.add:hover {
+    cursor: pointer;
+    background-color: #7ccbc8;
+}
+
+.add-img {
+    width: 30px;
+    float: right;
+}

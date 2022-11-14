@@ -1,0 +1,87 @@
+.modal-overlay {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.6);
+}
+
+.modal-window {
+    z-index: 2;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.modal-body {
+    z-index: 3;
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    height: 90vh;
+    gap: 10px;
+    background: #FFF;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-off {
+    overflow: hidden;
+}
+
+.modal-close {
+    cursor: pointer;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 15px;
+    top: 15px;
+    border: 2px solid #7ccbc8;
+    border-radius: 100px;
+    background: none;
+    font-size: 25px;
+}
+
+.modal-close:hover {
+    background: rgba(124, 203, 200, .8);
+ }
+
+ .modal__img {
+    position: relative;
+    left: 1%;
+    object-fit: cover;
+    width: 90%;
+    height: 90%;
+ }
+ 
+ .modal__content {
+    font-family: 'Ubuntu', sans-serif;
+    width: 30vh;
+    text-align: center;
+ }
+
+ .modal-add {
+    z-index: 5;
+    border-radius: 30px;
+    border: 1px solid #7ccbc8;
+    width: 70px;
+    height: 35px;
+    align-self: center;
+    justify-self: center;
+    background-color: #7ccbc8;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1em;
+    margin-top: 50px;
+}
+
+.modal-add:hover {
+    cursor: pointer;
+    background-color: aquamarine;
+}

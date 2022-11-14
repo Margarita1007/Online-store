@@ -1,0 +1,24 @@
+.header-title {
+    height: 50px;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    background-color: #7ccbc8;
+    background-size: cover;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: start;
+    padding-left: 5vw;
+    color: #4f4f4f;
+}
+
+.header-title h3, .header-title h3 a {
+    text-decoration: none;
+    color: #4f4f4f;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.header-title h3 a:hover {
+    color: #111;
+}

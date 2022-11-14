@@ -1,0 +1,55 @@
+.wrapper-main {
+    width: 90vw;
+    margin: 0 auto;
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+    "A B"
+    "A C";
+}
+    
+.main-filters {
+    grid-area: A;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 190px;
+    font-size: 1.5rem;
+    
+}
+
+.main-cards {
+    grid-area: B;
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    column-gap: 3%;
+    justify-content: center;
+}
+
+
+.div_clear_filters, .div_clear_cart, .div_clear_all {
+    display: flex;
+    justify-content: center;
+}
+
+.load_all, .clear_filters, .clear_cart, .clear_all {
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    background-color: #7ccbc8;
+    margin: 0;
+}
+
+.load_all:hover, .clear_filters:hover, .clear_cart:hover, .clear_all:hover {
+    cursor: pointer;
+    font-weight: 600;
+    background-color: #4f4f4f;
+    color: #7ccbc8;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, .8);
+}
