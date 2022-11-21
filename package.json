@@ -2,7 +2,7 @@
   "name": "online-store",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://margarita1007.github.io/Online-store/",
+  "homepage": ".",
   "dependencies": {
     "@mui/material": "^5.10.4",
     "@reduxjs/toolkit": "^1.8.5",
