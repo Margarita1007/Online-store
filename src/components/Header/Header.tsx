@@ -27,7 +27,9 @@ const Header: React.FC = () => {
                 </div>
             </nav>
             <div className="cart">
-                <img className="img-cart" src='../../assets/icons/cart.png' alt="cart"/>
+                <Link to="/Cart">
+                    <img className="img-cart" src='../../assets/icons/cart.png' alt="cart"/>
+                </Link>
                 <input id='cart-counter' className="cart-counter" type="button" value={inputValue} data-counter/>
             </div>
         </div>

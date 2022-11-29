@@ -20,13 +20,13 @@
     display: grid;
     color: #4f4f4f;
     grid-template-columns: 200px 1fr;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 1.25rem;
 }
 
 .product_price {
     color: #7ccbc8;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 }
 
 .product_name {
@@ -99,3 +99,6 @@
     padding-top: 3rem;
 }
 
+.disabled {
+    visibility: hidden;
+}

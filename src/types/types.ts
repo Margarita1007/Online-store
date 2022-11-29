@@ -13,7 +13,7 @@ export type CardType = {
 
 export type CartItems = {
     id: string,
-    numbers: number
+    numbers: number,
 }
 
 export type State = {

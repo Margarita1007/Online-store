@@ -18,7 +18,6 @@ const Card: React.FC<CardType> = (props) => {
             if (findItem) {
                 setInCart(true); 
                 setNumberInCart(findItem.numbers);
-                console.log(findItem)
             }
         }
     })

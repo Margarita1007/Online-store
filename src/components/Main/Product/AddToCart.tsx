@@ -26,32 +26,7 @@ const AddToCart: React.FC = () => {
                 'id': idProd,
                 'numbers': addCart
             };
-            // const cartLS = localStorage.getItem('cart');
-            // if (cartLS) {
-            //     const cartOld: CartItems[] = JSON.parse(cartLS);
-            //     const findItem = cartOld.find((item) => item.id === idProd);
-            //     if (findItem) {
-            //         // cartItem = {
-            //         //     'id': idProd,
-            //         //     'numbers': findItem.numbers + addCart
-            //         // };
-            //         // console.log(cartOld)
-            //         cartOld.forEach((item) => {
-            //             if (item.id === idProd) {
-            //                 item.numbers += addCart
-            //             }
-            //         });
-            //         localStorage.setItem('cart', JSON.stringify(cartOld));
-            //         // input.value = String(cartOld.length);
-            //     } else {
-            //         cartOld.push(cartItem);
-            //         localStorage.setItem('cart', JSON.stringify(cartOld));
-            //         // input.value = String(cartOld.length);
-            //     }
-            // } else {
-            //     localStorage.setItem('cart', JSON.stringify(cartItem));
-            //     // input.value = '1';
-            // }
+
             if (state.cart.find((item) => item.id === idProd)) {
                 state.cart.forEach((item) => {
                     if (item.id === idProd) {
@@ -68,8 +43,18 @@ const AddToCart: React.FC = () => {
                 const cart: CartItems[] = JSON.parse(cartLS);
                 input.value = String(cart.length);
             }
-        }
+        };
+        added();
     }
+
+    function added() {
+        const text = document.getElementById('settimeout') as HTMLElement;
+        setTimeout(() => {
+            text.classList.add('disabled')
+        }, 1000);
+        text.classList.remove('disabled');
+    }
+
     return (
         <div className="button_container">
             <div className="amount_buttons_container">
@@ -77,7 +62,7 @@ const AddToCart: React.FC = () => {
                 <h2>{addCart}</h2>
                 <button className="amount_button" onClick={plus}>+</button>
             </div>
-            <p className="text_added">
+            <p className="text_added" id="settimeout">
                 {inCart ? 'Added to cart' : ''}
             </p>
             <button className="cart_button" onClick={add}>ADD TO CART</button>
