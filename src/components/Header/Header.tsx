@@ -15,6 +15,7 @@ const Header: React.FC = () => {
     })
     
     return (
+        <header>
         <div className='header-wrapper'>
             <div className="logo"> 
                 <img src={logo} alt="logo"/>
@@ -33,6 +34,7 @@ const Header: React.FC = () => {
                 <input id='cart-counter' className="cart-counter" type="button" value={inputValue} data-counter/>
             </div>
         </div>
+        </header>
     )
 }
 

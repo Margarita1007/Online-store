@@ -8,6 +8,7 @@ import About from './components/Main/About/About';
 import Product from './components/Main/Product/Product';
 import { CartItems } from './types/types';
 import Cart from './components/Main/Cart/Cart';
+import Footer from './components/Footer/Footer';
 
 const App: React.FC = () => {
   
@@ -23,6 +24,7 @@ const App: React.FC = () => {
             <Route path='Cart' element={<Cart />} />
         </Routes>
       </main>
+      <Footer/>
     </div>
   )
 }

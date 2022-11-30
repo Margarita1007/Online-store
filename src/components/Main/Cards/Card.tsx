@@ -36,9 +36,13 @@ const Card: React.FC<CardType> = (props) => {
                 <p className="card__description_name">{props.name}</p>
                 <p className="card__description_price">${props.price}</p>               
                 {inCart ? <p className="inCart">In cart: {numberInCart}</p> :
+                
                 <button className="add">
-                    <img className="add-img" src="../../../assets/icons/cart.png"/>
+                    <Link to={path}>
+                        <img className="add-img" src="../../../assets/icons/cart.png"/>
+                    </Link> 
                 </button>
+                
                 }
             </div>
         </>

@@ -26,7 +26,7 @@ const Navigation: React.FC = () => {
             <div className="header-title"> 
                 <h3>
                     <Link to='/'>Home</Link> 
-                    <Link to={path}> {path}</Link>
+                    <Link to={path}>{path}</Link>
                 </h3>
             </div>
         )
