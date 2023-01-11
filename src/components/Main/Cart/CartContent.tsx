@@ -1,4 +1,6 @@
+import { stat } from "fs";
 import React, { useEffect, useState } from "react";
+import { useAppSelector } from "../../../app/hooks";
 import { CartItems } from "../../../types/types";
 import { info_cards } from "../Cards/info-cards";
 import CartItem from "./CartItem";
@@ -7,24 +9,21 @@ import CartList from "./CartList";
 
 const CartContent: React.FC = () => {
 
-
+    const stateCart = useAppSelector(state => state.cart);
     const [subtotal, setSubtotal] = useState<number>(0);
     const fee: number = 5.35;
+
     useEffect(() => {
-        const cartLS = localStorage.getItem('cart');
-        if (cartLS) {
-            const cart: CartItems[] = JSON.parse(cartLS);
-            let counter: number = 0;
-            cart.forEach((elem) => {
-                const findCard = info_cards.find((item) => item.id.toString() === elem.id);
-                if (findCard) {
-                    const subtotalItem: number = findCard.price * elem.numbers;
-                    counter += subtotalItem;
-                }
-            })
-            setSubtotal(Number(counter.toFixed(2))); 
-        }
-    })
+        let counter: number = 0;
+        stateCart.cartItem.forEach((elem) => {
+            const findCard = info_cards.find((item) => item.id.toString() === elem.id);
+            if (findCard) {
+                const subtotalItem: number = findCard.price * elem.numbers;
+                counter += subtotalItem;
+            }
+        })
+        setSubtotal(Number(counter.toFixed(2)));
+    }, [stateCart])
 
 
 
@@ -41,7 +40,14 @@ const CartContent: React.FC = () => {
 
                 </div>
                 <hr/>
-                {CartList()}
+                {stateCart.cartItem.map((item) => (
+                    <div className="cart_item"  key = {item.id} id = {'item_' + item.id}>
+                        <CartItem
+                            key={item.id}
+                            {...item}
+                        />
+                    </div>
+                ))}
                 <hr/>
                 <div className="total">
                     <h3>Subtotal:</h3> <h3>${subtotal}</h3>

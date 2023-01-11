@@ -11,15 +11,32 @@ export type CardType = {
     stock: number
 }
 
+export type FilterType = {
+    cardsFilter: CardType[],
+    category: string,
+    search: string,
+}
+
 export type CartItems = {
     id: string,
     numbers: number,
 }
 
-export type State = {
+export type StateType = {
     cart: {
         id: string,
         numbers: number,
     }[],
     filters: {}
 }
+
+export interface IstateCards {
+    cardItem: CardType[],
+    filters: {
+        cardsFilter: CardType[],
+        category: string,
+        search: string,
+    },
+    sort: string
+}
+

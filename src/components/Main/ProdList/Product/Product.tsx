@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import { info_cards } from "../Cards/info-cards";
-import Navigation from "../Navigation/Navigation";
+import { info_cards } from "../../Cards/info-cards";
+import Navigation from "../../Navigation/Navigation";
 import AddToCart from "./AddToCart";
 import './product.css';
 
@@ -34,7 +34,7 @@ const Product: React.FC = () => {
                             <p className="product_info"> <b>Height: </b> {props.height} cm </p>
                             <p className="product_info"> <b>Stock availability: </b> {props.stock}</p>
                             <hr/>
-                            <AddToCart/>
+                            {AddToCart(props.id)}
                         </div>
                     </div>
                 </div>

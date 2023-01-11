@@ -1,29 +1,23 @@
 import React from "react";
+import { CardType } from "../../../types/types";
+import Categories from "./Categories";
 import './filters.css';
+import SearchBar from "./Search";
 
 const Filters: React.FC = () => {
     return (
         <div className="main-filters">
 
-            <div className="search-filter">
-                <div className="search-wrapper">
-                    
-                        <form className="search-form">
-                            <input type="search" id="search-field" placeholder="Search..." autoComplete="off" autoFocus/>
-                            <input type="submit" id="search-submit" value="Search"/>
-                        </form>
-
-                </div>
-            </div>
+            <SearchBar />
             
-            <div className="range price-filter">
+            <div className="form-filter range-price-filter">
                 <legend className="legend legend_price">Price</legend>
                 <div className="range_price">
 
                 </div>
             </div>
 
-            <fieldset className="theme-filter">
+            {/* <fieldset className="theme-filter">
                 <legend>Theme</legend>
                 <div>
                     <input type="checkbox" id="nature" name="theme"/>
@@ -44,7 +38,12 @@ const Filters: React.FC = () => {
                     <input type="checkbox" id="travel" name="theme"/>
                     <label htmlFor="travel">Travel</label>
                 </div>
-            </fieldset>
+            </fieldset> */}
+            
+            <div className="form-filter category-filter">
+                <h5>Category</h5>
+                <Categories />
+            </div>
 
             <fieldset className="width-filter">
                 <legend>Width</legend>

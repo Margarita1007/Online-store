@@ -1,18 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useAppSelector } from '../../app/hooks';
 import logo from '../../assets/icons/logo2.png';
 import { CartItems } from '../../types/types';
 import './Header.css';
 
 const Header: React.FC = () => {
     const [inputValue, setInputValue] = useState(0);
+    const cart = useAppSelector(state => state.cart);
     useEffect(() => {
-        const cartLS = localStorage.getItem('cart');
-        if (cartLS) {
-            const cart: CartItems[] = JSON.parse(cartLS);
-            setInputValue(cart.length);
-        }
-    })
+        // const cartLS = localStorage.getItem('cart');
+        // if (cartLS) {
+        //     const cart: CartItems[] = JSON.parse(cartLS);
+        //     setInputValue(cart.length);
+        // }
+        setInputValue(cart.cartItem.length);
+    },[cart.cartItem])
     
     return (
         <header>

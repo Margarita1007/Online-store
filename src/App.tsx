@@ -5,7 +5,7 @@ import Products from './components/Main/ProdList/Products';
 import { Route, Routes } from 'react-router-dom';
 import Home from './components/Main/Home/Home';
 import About from './components/Main/About/About';
-import Product from './components/Main/Product/Product';
+import Product from './components/Main/ProdList/Product/Product';
 import { CartItems } from './types/types';
 import Cart from './components/Main/Cart/Cart';
 import Footer from './components/Footer/Footer';

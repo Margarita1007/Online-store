@@ -1,9 +1,8 @@
-
 .card {
     display: flex;
     flex-direction: column;
     width: 30%;
-    height: max-content;
+    height: auto;
     box-shadow: 0 0 1em rgba(124, 203, 200, .8);
     transition: 0.3s;
 } 

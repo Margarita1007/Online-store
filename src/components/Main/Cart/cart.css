@@ -80,3 +80,29 @@ hr {
 .cart_item_delete img:hover {
     cursor: pointer;
 }
+
+.amount_buttons_container_cart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+}
+
+
+.amount_button_cart {
+    background: transparent;
+    border-color: transparent;
+    color: #4f4f4f;
+    cursor: pointer;
+    padding: 1rem 0px;
+    font-weight: bold;
+    width: 2.5rem;
+    /* height: 2rem; */
+    font-size: 1.5rem;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}

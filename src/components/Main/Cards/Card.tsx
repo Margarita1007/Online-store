@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { CardType, CartItems } from "../../../types/types";
 import { Routes, Route, Link, useParams} from "react-router-dom";
-import Popup from "../Popup";
 import './card.css';
 import loupe from '../../../assets/icons/blackloupe.svg';
 
