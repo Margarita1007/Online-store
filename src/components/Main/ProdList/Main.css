@@ -1,8 +1,8 @@
 .wrapper-main {
     width: 90vw;
-    margin: 0 auto;
+    margin:30px auto;
     display: grid;
-    gap: 10px;
+    gap: 40px;
     grid-template-areas:
     "A B"
     "A C";
@@ -13,21 +13,22 @@
     
 .main-filters {
     grid-area: A;
-    padding-top: 30px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
-
+    gap: 50px;
     font-size: 1.5rem;
     
 }
 
 .lineprod {
     grid-area: B;
-    padding-top: 30px;
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto 1fr auto auto;
     align-items: center;
+}
+
+.lineprod p {
+    margin: 5px 0;
 }
 
 .lineprod hr {
@@ -80,3 +81,63 @@
 .notfound-cards {
     margin: 0 auto;
 }
+
+.sort_list {
+    margin-left: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+}
+
+@media screen and (max-width: 650px) {
+    .wrapper-main {
+        grid-template-areas:
+        "A"
+        "B"
+        "C";
+        grid-template-columns: auto;
+    }
+
+    #search-field {
+        width: 100%;
+    }
+
+    .search-wrapper {
+        width: 100%;
+    }
+
+    .main-filters {
+        gap: 10px;
+        font-size: 1rem;
+    }
+
+    .category-list {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 20%;
+    }
+
+    .category-list button {
+        font-size: 0.8rem;
+    }
+
+    .form-filter {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .form-filter h5 {
+        margin: 0.25rem 0 0.5em;
+        font-size: 1rem;
+    }
+
+    .slider__right-value, .slider__left-value {
+        font-size: 10px;
+    }
+}
+

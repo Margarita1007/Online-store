@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAppSelector } from '../../app/hooks';
-import logo from '../../assets/icons/logo2.png';
+import logo from '../../assets/icons/logo3.png';
 import { CartItems } from '../../types/types';
 import './Header.css';
 

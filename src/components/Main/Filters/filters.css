@@ -45,3 +45,8 @@ button.active {
     border-bottom: 2px solid;
     color: #4f4f4f;
 }
+
+.range_price {
+    padding: 10px 0;
+    margin: 10px 0 20px 0;
+}

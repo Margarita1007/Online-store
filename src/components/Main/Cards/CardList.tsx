@@ -20,34 +20,31 @@ import Card from "./Card";
 // } 
 
 const CardList: React.FC = () => {
-    const cards = useAppSelector(selectCardState).cardItem;
-    console.log(cards);
-    // try {
-        return (
-            <>
-            {cards.length ?
-                cards.map((card) => (
-                <div className="card"  key = {card.id}>
-                    <Card 
-                        key={card.article}
-                        {...card}
-                    />
-                </div>
-                ))
-            : 
-            <div className="notfound-cards">Not Found</div>
-            }
-            </>
-        )
-    // }
-    // catch(err) {
-    //    return (
-    //     <div>
-    //         ошибка
-    //     </div>
-    //    )
-    // }
+    const stateCards = useAppSelector(state => state.cards.cardItem);
+    const sort = useAppSelector(state => state.cards.sort);
+    let cards = [...stateCards];
+    if (sort === 'Price') {
+        cards.sort((a, b) => a.price - b.price)
+    } 
     
+    console.log(cards);
+
+    return (
+        <>
+        {cards.length ?
+            cards.map((card) => (
+            <div className="card"  key = {card.id}>
+                <Card 
+                    key={card.article}
+                    {...card}
+                />
+            </div>
+            ))
+        : 
+        <div className="notfound-cards">Not Found</div>
+        }
+        </>
+    )    
 }
 
 export default CardList

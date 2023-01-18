@@ -39,16 +39,19 @@ function filtered(filters: FilterType) {
     let products = info_cards;
     if (filters.search) {
         if (filters.category !== 'All') {
-            const filt = products.filter(item => item.theme == filters.category); //фильтр по категории
+            let filt = products.filter(item => item.theme == filters.category); //фильтр по категории
+            filt.filter(item => item.price >= filters.price.min && item.price <= filters.price.max) //по цене
             return filt.filter(item => item.name.toLowerCase().includes(filters.search.toLowerCase())); //плюс поиск
         } else {
-            return products.filter(item => item.name.toLowerCase().includes(filters.search.toLowerCase())); //все кат плюс поиск
+            let filt = products.filter(item => item.price >= filters.price.min && item.price <= filters.price.max)
+            return filt.filter(item => item.name.toLowerCase().includes(filters.search.toLowerCase())); //все кат плюс поиск
         }
     } else {
         if (filters.category !== 'All') {
-            return products.filter(item => item.theme == filters.category); 
+            let filt = products.filter(item => item.price >= filters.price.min && item.price <= filters.price.max)
+            return filt.filter(item => item.theme == filters.category); 
         } else {
-            return products
+            return products.filter(item => item.price >= filters.price.min && item.price <= filters.price.max)
         }
     }
 }
@@ -73,11 +76,22 @@ export const cardSlice = createSlice({
             state.cardItem = filtered(state.filters);
             // state.cardItem = info_cards.filter(item => item.theme === action.payload);
             localStorage.setItem('state', JSON.stringify(state))
+        },
+        setSort: (state, action: PayloadAction<string>) => {
+            action.payload === 'Default' ? 
+            state.sort = "" : state.sort = action.payload;
+            localStorage.setItem('state', JSON.stringify(state))
+        },
+        setPrice: (state, action) => {
+            state.filters.price = action.payload;
+            state.cardItem = filtered(state.filters);
+            localStorage.setItem('state', JSON.stringify(state));
+            
         }
     }
 })
 
-export const { setSearchWord, setCat } = cardSlice.actions;
+export const { setSearchWord, setCat, setSort, setPrice} = cardSlice.actions;
 
 export const selectCardState = (state: RootState) => state.cards;
 

@@ -1,19 +1,45 @@
 import React from "react";
+import { useAppSelector } from "../../../app/hooks";
+import MultiRangeSlider from "../../../app/multiRangeSlider/multiRangeSlider";
 import { CardType } from "../../../types/types";
+import { setCat } from "../StateSlice";
 import Categories from "./Categories";
 import './filters.css';
+import PriceSlider from "./Price";
 import SearchBar from "./Search";
 
 const Filters: React.FC = () => {
+    // const stateCards = useAppSelector(state => state.cards.cardItem);
+    // let sortCardsPrice = [...stateCards]
+    // sortCardsPrice.sort((a, b) => a.price - b.price);
+    // const minPrice = Math.floor(sortCardsPrice[0].price);
+    // const maxPrice = Math.ceil(sortCardsPrice[sortCardsPrice.length - 1].price)
+    //console.log('sortPrice', sortCardsPrice)
     return (
         <div className="main-filters">
 
             <SearchBar />
             
             <div className="form-filter range-price-filter">
-                <legend className="legend legend_price">Price</legend>
+                <h5>Price</h5>
                 <div className="range_price">
-
+                    <MultiRangeSlider
+                        // min={minPrice}
+                        // max={maxPrice}
+                        // min={sortCardsPrice[0].price}
+                        // max={sortCardsPrice[sortCardsPrice.length].price}
+                    />
+                    {/* <PriceSlider/> */}
+                    {/* <input
+                        type="range"
+                        name="price"
+                        min={0}
+                        max={100}
+                        // onChange={updateFilters}
+                        // min={min_price}
+                        // max={max_price}
+                        // value={price}
+                    /> */}
                 </div>
             </div>
 
@@ -45,7 +71,7 @@ const Filters: React.FC = () => {
                 <Categories />
             </div>
 
-            <fieldset className="width-filter">
+            {/* <fieldset className="width-filter">
                 <legend>Width</legend>
                 <div>
                     <input type="checkbox" id="60-width" name="width"/>
@@ -133,7 +159,7 @@ const Filters: React.FC = () => {
             </div>
             <div className="div_clear_cart">
                 <button className="clear_cart">Clear cart</button>
-            </div>
+            </div> */}
 
         </div>
     )

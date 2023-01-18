@@ -15,6 +15,10 @@ export type FilterType = {
     cardsFilter: CardType[],
     category: string,
     search: string,
+    price: {
+        min: number,
+        max: number
+    }
 }
 
 export type CartItems = {
@@ -36,6 +40,10 @@ export interface IstateCards {
         cardsFilter: CardType[],
         category: string,
         search: string,
+        price: {
+            min: number,
+            max: number
+        }
     },
     sort: string
 }

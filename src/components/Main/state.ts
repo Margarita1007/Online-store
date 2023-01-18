@@ -7,12 +7,26 @@ export function getStateLS() {
 // if (cartLS) {
 //     cart = JSON.parse(cartLS);
 // }
+
+    let sortCardsPrice = [...info_cards]
+    sortCardsPrice.sort((a, b) => a.price - b.price);
+    let minPrice = sortCardsPrice[0].price;
+    let maxPrice = sortCardsPrice[sortCardsPrice.length - 1].price;
+    if (Number.isInteger(minPrice)) minPrice = Math.floor(sortCardsPrice[0].price);  
+    if (Number.isInteger(maxPrice)) maxPrice = Math.ceil(sortCardsPrice[sortCardsPrice.length - 1].price);
+    // const minPrice = Math.floor(sortCardsPrice[0].price);
+    // const maxPrice = Math.ceil(sortCardsPrice[sortCardsPrice.length - 1].price);
+
     const initialState: IstateCards = {
         cardItem: info_cards,
         filters: {
             cardsFilter: [],
             category: 'All',
-            search: ""
+            search: "",
+            price: {
+                min: minPrice,
+                max: maxPrice
+            }
         },
         sort: ""
     }
@@ -23,20 +37,5 @@ export function getStateLS() {
     } else return initialState
 }
 
-// const stateLS: IstateCards  = {
-     
-// }
-// // 
-// export default stateLS;
-
-// interface stateCards {
-//     cardItem: CardType[],
-//     filters: {
-//         cardsFilter: CardType[],
-//         category: string,
-//         search: string,
-//     },
-//     sort: string
-// }
 
 export default getStateLS;
