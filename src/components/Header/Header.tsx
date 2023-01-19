@@ -4,6 +4,7 @@ import { useAppSelector } from '../../app/hooks';
 import logo from '../../assets/icons/logo3.png';
 import { CartItems } from '../../types/types';
 import './Header.css';
+import cartImg from "../../assets/icons/cart.png";
 
 const Header: React.FC = () => {
     const [inputValue, setInputValue] = useState(0);
@@ -32,7 +33,7 @@ const Header: React.FC = () => {
             </nav>
             <div className="cart">
                 <Link to="/Cart">
-                    <img className="img-cart" src='../../assets/icons/cart.png' alt="cart"/>
+                    <img className="img-cart" src={cartImg} alt="cart"/>
                 </Link>
                 <input id='cart-counter' className="cart-counter" type="button" value={inputValue} data-counter/>
             </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import './home.css';
+import homeImg from '../../../assets/img/card12.jpg';
 
 const Home: React.FC = () => {
     return (
@@ -17,7 +18,7 @@ const Home: React.FC = () => {
                 </Link>
             </div>
             <div className="home_img">
-                <img src='../../../assets/img/card12.jpg'></img>
+                <img src={homeImg}></img>
             </div>
         </div>
     )

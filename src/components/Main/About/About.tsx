@@ -1,6 +1,7 @@
 import React from "react";
 import Navigation from "../Navigation/Navigation";
 import './about.css';
+import imgAbout from "../../../assets/img/card16.jpg";
 
 const About: React.FC = () => {
     return (
@@ -8,7 +9,7 @@ const About: React.FC = () => {
             <Navigation/>
             <div className="about_wrapper">
                 <div className="about_img">
-                    <img src="../../../assets/img/card16.jpg"></img>
+                    <img src={imgAbout}></img>
                 </div>
                 <div className="about_text_block">
                     <h1>Our story</h1>

@@ -3,6 +3,7 @@ import { CardType, CartItems } from "../../../types/types";
 import { Routes, Route, Link, useParams} from "react-router-dom";
 import './card.css';
 import loupe from '../../../assets/icons/blackloupe.svg';
+import cartImg from "../../../assets/icons/cart.png";
 
 
 const Card: React.FC<CardType> = (props) => {
@@ -38,7 +39,7 @@ const Card: React.FC<CardType> = (props) => {
                 
                 <button className="add">
                     <Link to={path}>
-                        <img className="add-img" src="../../../assets/icons/cart.png"/>
+                        <img className="add-img" src={cartImg} alt="cart"/>
                     </Link> 
                 </button>
                 

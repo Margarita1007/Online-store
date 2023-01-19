@@ -1,4 +1,23 @@
 import { CardType } from "../../../types/types";
+import imgcard1 from "../../../assets/img/card1.jpeg";
+import imgcard2 from "../../../assets/img/card2.jpg";
+import imgcard3 from "../../../assets/img/card3.jpg";
+import imgcard4 from "../../../assets/img/card4.jpg";
+import imgcard5 from "../../../assets/img/card5.jpg";
+import imgcard6 from "../../../assets/img/card6.jpeg";
+import imgcard7 from "../../../assets/img/card7.jpeg";
+import imgcard8 from "../../../assets/img/card8.jpg";
+import imgcard9 from "../../../assets/img/card9.jpg";
+import imgcard10 from "../../../assets/img/card10.jpg";
+import imgcard11 from "../../../assets/img/card11.jpg";
+import imgcard12 from "../../../assets/img/card12.jpg";
+import imgcard13 from "../../../assets/img/card13.jpg";
+import imgcard14 from "../../../assets/img/card14.jpeg";
+import imgcard15 from "../../../assets/img/card15.jpg";
+import imgcard16 from "../../../assets/img/card16.jpg";
+import imgcard17 from "../../../assets/img/card17.jpeg";
+import imgcard18 from "../../../assets/img/card18.jpg";
+
 
 export const info_cards: CardType[] = [
     {
@@ -10,7 +29,7 @@ export const info_cards: CardType[] = [
         "width": 180,
         "height": 120,
         // "imgsrc": "../../../assets/img/card1.jpeg",
-        "imgsrc": '../../../assets/img/card1.jpeg',
+        "imgsrc": imgcard1,
         "price": 49.99,
         "stock": 3
     },
@@ -22,7 +41,7 @@ export const info_cards: CardType[] = [
         "modules": 3,
         "width": 210,
         "height": 140,
-        "imgsrc": "../../../assets/img/card2.jpg",
+        "imgsrc": imgcard2,
         "price": 59.99,
         "stock": 0
     },
@@ -34,7 +53,7 @@ export const info_cards: CardType[] = [
         "modules": 3,
         "width": 180,
         "height": 120,
-        "imgsrc": "../../../assets/img/card3.jpg",
+        "imgsrc": imgcard3,
         "price": 42.99,
         "stock": 1
     },
@@ -46,7 +65,7 @@ export const info_cards: CardType[] = [
         "modules": 1,
         "width": 180,
         "height": 60,
-        "imgsrc": "../../../assets/img/card4.jpg",
+        "imgsrc": imgcard4,
         "price": 42.99,
         "stock": 0
     },
@@ -58,7 +77,7 @@ export const info_cards: CardType[] = [
         "modules": 1,
         "width": 240,
         "height": 60,
-        "imgsrc": "../../../assets/img/card5.jpg",
+        "imgsrc": imgcard5,
         "price": 53.99,
         "stock": 3
     },
@@ -70,7 +89,7 @@ export const info_cards: CardType[] = [
         "modules": 3,
         "width": 240,
         "height": 120,
-        "imgsrc": "../../../assets/img/card6.jpeg",
+        "imgsrc": imgcard6,
         "price": 57.99,
         "stock": 3
     },
@@ -82,7 +101,7 @@ export const info_cards: CardType[] = [
         "modules": 2,
         "width": 180,
         "height": 150,
-        "imgsrc": "../../../assets/img/card7.jpeg",
+        "imgsrc": imgcard7,
         "price": 54.99,
         "stock": 3
     },
@@ -94,7 +113,7 @@ export const info_cards: CardType[] = [
         "modules": 3,
         "width": 180,
         "height": 120,
-        "imgsrc": "../../../assets/img/card8.jpg",
+        "imgsrc": imgcard8,
         "price": 49.99,
         "stock": 3
     },
@@ -106,7 +125,7 @@ export const info_cards: CardType[] = [
         "modules": 1,
         "width": 60,
         "height": 100,
-        "imgsrc": "../../../assets/img/card9.jpg",
+        "imgsrc": imgcard9,
         "price": 34.99,
         "stock": 3
     },
@@ -118,7 +137,7 @@ export const info_cards: CardType[] = [
         "modules": 3,
         "width": 180,
         "height": 100,
-        "imgsrc": "../../../assets/img/card10.jpg",
+        "imgsrc": imgcard10,
         "price": 38.99,
         "stock": 3
     },
@@ -130,7 +149,7 @@ export const info_cards: CardType[] = [
         "modules": 5,
         "width": 120,
         "height": 60,
-        "imgsrc": "../../../assets/img/card11.jpg",
+        "imgsrc": imgcard11,
         "price": 35.99,
         "stock": 3
     },
@@ -142,7 +161,7 @@ export const info_cards: CardType[] = [
         "modules": 5,
         "width": 180,
         "height": 100,
-        "imgsrc": "../../../assets/img/card12.jpg",
+        "imgsrc": imgcard12,
         "price": 37.99,
         "stock": 3
     },
@@ -154,7 +173,7 @@ export const info_cards: CardType[] = [
         "modules": 5,
         "width": 150,
         "height": 90,
-        "imgsrc": "../../../assets/img/card13.jpg",
+        "imgsrc": imgcard13,
         "price": 41.99,
         "stock": 3
     },
@@ -166,7 +185,7 @@ export const info_cards: CardType[] = [
         "modules": 3,
         "width": 180,
         "height": 90,
-        "imgsrc": "../../../assets/img/card14.jpeg",
+        "imgsrc": imgcard14,
         "price": 42.99,
         "stock": 3
     },
@@ -178,7 +197,7 @@ export const info_cards: CardType[] = [
         "modules": 3,
         "width": 120,
         "height": 60,
-        "imgsrc": "../../../assets/img/card15.jpg",
+        "imgsrc": imgcard15,
         "price": 33.99,
         "stock": 3
     },
@@ -190,7 +209,7 @@ export const info_cards: CardType[] = [
         "modules": 1,
         "width": 60,
         "height": 90,
-        "imgsrc": "../../../assets/img/card16.jpg",
+        "imgsrc": imgcard16,
         "price": 29.99,
         "stock": 3
     },
@@ -202,7 +221,7 @@ export const info_cards: CardType[] = [
         "modules": 1,
         "width": 60,
         "height": 90,
-        "imgsrc": "../../../assets/img/card17.jpeg",
+        "imgsrc": imgcard17,
         "price": 29.99,
         "stock": 3
     },
@@ -214,7 +233,7 @@ export const info_cards: CardType[] = [
         "modules": 2,
         "width": 120,
         "height": 90,
-        "imgsrc": "../../../assets/img/card18.jpg",
+        "imgsrc": imgcard18,
         "price": 45.99,
         "stock": 3
     }

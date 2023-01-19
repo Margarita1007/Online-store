@@ -5,13 +5,13 @@
 
 .product_content_wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin: 2rem auto;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 1rem;
+    margin: 1rem auto;
 }
 
 .product_img img{
-    height: 500px;
+    height: 425px;
     object-fit: contain;
 }
 
@@ -20,17 +20,17 @@
     display: grid;
     color: #4f4f4f;
     grid-template-columns: 200px 1fr;
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 1.25rem;
 }
 
 .product_price {
     color: #7ccbc8;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .product_name {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #4f4f4f;
     margin-top: 0;
 }
@@ -38,7 +38,7 @@
 .cart_button, .back_button {
     padding: 0.5rem 1.2rem;
     font-family: 'Ubuntu', sans-serif;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 400;
     background-color: #7ccbc8;
     margin: 0;
@@ -55,10 +55,10 @@
 }
 
 .button_container {
-    padding-top: 1.5rem;
+    padding-top: 1rem;
     display: grid;
     column-gap: 3em;
-    grid-template-columns: 10rem 1fr;
+    grid-template-columns: 8rem 1fr;
     grid-template-areas: 
     "A B"
     "C C";
@@ -75,7 +75,7 @@
 .amount_buttons_container h2 {
     margin: 0;
     color: #4f4f4f;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .amount_button {
@@ -87,7 +87,7 @@
     font-weight: bold;
     width: 4rem;
     height: 2rem;
-    font-size: 2rem;
+    font-size: 1.2rem;
     display: flex;
     -webkit-box-align: center;
     align-items: center;
@@ -96,7 +96,7 @@
 }
 
 .back {
-    padding-top: 3rem;
+    padding-top: 1rem;
 }
 
 .disabled {
