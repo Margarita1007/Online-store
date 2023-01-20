@@ -32,7 +32,6 @@ const SearchBar: React.FC = () => {
                                 id="search-field" 
                                 placeholder="Search..." 
                                 autoComplete="off" 
-                                autoFocus
                                 onChange={(e) => search(e.target.value)}
                                 value={getSearchWord()}
                             />

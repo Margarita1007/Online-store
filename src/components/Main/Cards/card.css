@@ -1,6 +1,7 @@
 .card {
     display: flex;
     flex-direction: column;
+    /* justify-content: space-between; */
     width: 30%;
     height: auto;
     box-shadow: 0 0 1em rgba(124, 203, 200, .8);
@@ -80,13 +81,13 @@
 .card__description_name {
     grid-area: A;
     text-align: center;
-    margin: 5% 0 2% 0; 
+    margin: 2% 0 0 0; 
 }
 
 .card__description_price {
     grid-area: C;
     text-align: start;
-    margin: 5% 0 5% 10%;
+    margin: 2% 0 0 10%;
 }
 
 .card__description_more {
@@ -105,7 +106,7 @@
 
 .inCart {
     grid-area: D;
-    margin: 5% 10% 5% 0;
+    margin: 2% 10% 0 0;
     text-align: end;
 }
 
@@ -120,7 +121,7 @@
     margin-right: 10%;
     background: none;
     font-family: 'Ubuntu', sans-serif;
-    margin: 0 10% 5% 0;
+    margin: 0 10% 0 0;
 }
 
 .add:hover {
@@ -135,7 +136,7 @@
 
 @media screen and (max-width: 1100px) {
     .card {
-      width: 45%;
+      width: 48%;
     }
   }
 
@@ -148,6 +149,22 @@
 @media screen and (max-width: 700px) {
     .add-img {
         width: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .card__description {
+        font-size: 0.8rem;
+    }
+
+    .add-img {
+        width: 15px;
+    }
+
+    .add {
+        width: 25px;
+        height: 25px;
+        border-radius: 25px;
     }
 }
   
