@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "0c70e2268a88c68d57a7",
-    "url": "./static/css/main.07d87a91.chunk.css"
+    "revision": "66bd0bcf4405bac9311a",
+    "url": "./static/css/main.0fba4f3a.chunk.css"
   },
   {
-    "revision": "0c70e2268a88c68d57a7",
-    "url": "./static/js/main.ec901f95.chunk.js"
+    "revision": "66bd0bcf4405bac9311a",
+    "url": "./static/js/main.e5d9e2ea.chunk.js"
   },
   {
     "revision": "8c97409f0ee389fe75da",
@@ -96,7 +96,7 @@ self.__precacheManifest = [
     "url": "./static/media/blackloupe.675687c0.svg"
   },
   {
-    "revision": "1e035c2db28482feb4d4f8954efb24be",
+    "revision": "27fb5d9102af7ca10876d781a4045fef",
     "url": "./index.html"
   }
 ];
