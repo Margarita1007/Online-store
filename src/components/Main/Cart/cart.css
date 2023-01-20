@@ -38,6 +38,7 @@
 
 .cart_item_name {
     font-size: 1.2rem;
+    text-align: center;
 }
 
 .cart_item_price, .cart_item_subtotal {
@@ -106,3 +107,67 @@ hr {
     -webkit-box-pack: center;
     justify-content: center;
 }
+
+@media screen and (max-width: 900px) {
+    
+    .cart_header {
+        font-size: 1.5rem;
+    }
+
+    .cart_item {
+        font-size: 1rem;
+    }
+
+    .cart_item_name {
+        font-size: 0.8rem;
+    }
+
+    .amount_buttons_container_cart {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .cart_item_price, .cart_header_price {
+        display: none;
+    }
+
+    .cart_item, .cart_header {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+
+    .cart_header {
+        font-size: 1rem;
+    }
+
+    .cart_item_img img {
+        width: 50px;
+    }
+
+    .amount_button_cart {
+        width: 1.5rem;
+        font-size: 0.8rem;
+    }
+
+    .cart_item_name {
+        font-size: 0.6rem;
+    }
+
+    .cart_item {
+        font-size: 0.8rem;
+    }
+
+    .cart_item_delete img {
+        width: 15px;
+    }
+
+    .total h3 {
+        font-size: 0.8rem;
+    }
+
+    .total h1 {
+        font-size: 1rem;
+    }
+}
+

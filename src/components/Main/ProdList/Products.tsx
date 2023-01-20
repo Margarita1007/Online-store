@@ -6,6 +6,7 @@ import Card from '../Cards/Card';
 import CardList from '../Cards/CardList';
 import { info_cards } from '../Cards/info-cards';
 import Filters from '../Filters/Filters';
+import Filters320 from '../Filters/Filters320';
 import Navigation from '../Navigation/Navigation';
 import Line from './LineProd';
 import './Main.css';
@@ -20,6 +21,7 @@ const Products: React.FC = () => {
             <Navigation />
             <div className="wrapper-main">
                 <Filters />
+                <Filters320/>
                 <section className='wrapper-cards'>
                     <Line/>
                     <div className="main-cards">

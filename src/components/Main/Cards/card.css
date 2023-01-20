@@ -134,23 +134,20 @@
 }
 
 @media screen and (max-width: 1100px) {
-  
     .card {
       width: 45%;
     }
   }
 
 @media screen and (max-width: 900px) {
-
     .card__description {
         font-size: 1rem;
     }
 }
   
-/* @media screen and (max-width: 700px) {
-
-    .card {
-        width: 90%;
+@media screen and (max-width: 700px) {
+    .add-img {
+        width: 20px;
     }
-} */
+}
   

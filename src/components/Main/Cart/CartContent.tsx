@@ -33,7 +33,7 @@ const CartContent: React.FC = () => {
             <div className="cart_content">
                 <div className="cart_header">
                     <div><h5>Item</h5></div>
-                    <div><h5>Price</h5></div>
+                    <div className="cart_header_price"><h5>Price</h5></div>
                     <div><h5>Quanity</h5></div>
                     <div><h5>Subtotal</h5></div>
                     <div><h5>Delete</h5></div>

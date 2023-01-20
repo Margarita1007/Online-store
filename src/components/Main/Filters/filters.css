@@ -1,6 +1,7 @@
 #search-field {
     font-size: 1.2rem;
     width: 100%;
+    border: 2px #7ccbc8 solid;
 }
 
 #search-submit {
@@ -49,4 +50,47 @@ button.active {
 .range_price {
     padding: 10px 0;
     margin: 10px 0 20px 0;
+}
+
+.filters320 {
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+}
+
+.icon_filter {
+    display: none;
+}
+
+.icon_filter img {
+    width: 27px;
+}
+
+.filters_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.displaynone {
+    display: none;
+}
+
+@media screen and (max-width: 650px) {
+    .filters_wrapper {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .icon_filter {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .filters_wrapper {
+        display: none;
+    }
+
 }

@@ -7,41 +7,39 @@ import Categories from "./Categories";
 import './filters.css';
 import PriceSlider from "./Price";
 import SearchBar from "./Search";
+import iconFilter from '../../../assets/icons/icon-filter.png'
+import Filters320 from "./Filters320";
 
 const Filters: React.FC = () => {
-    // const stateCards = useAppSelector(state => state.cards.cardItem);
-    // let sortCardsPrice = [...stateCards]
-    // sortCardsPrice.sort((a, b) => a.price - b.price);
-    // const minPrice = Math.floor(sortCardsPrice[0].price);
-    // const maxPrice = Math.ceil(sortCardsPrice[sortCardsPrice.length - 1].price)
-    //console.log('sortPrice', sortCardsPrice)
+    function showFilters() {
+        const filters = document.getElementById("filter320") as HTMLElement;
+        filters.classList.contains('displaynone') ?
+        filters.classList.remove('displaynone') :
+        filters.classList.add('displaynone');
+        
+    }
     return (
         <div className="main-filters">
-
             <SearchBar />
-            
-            <div className="form-filter range-price-filter">
-                <h5>Price</h5>
-                <div className="range_price">
-                    <MultiRangeSlider
-                        // min={minPrice}
-                        // max={maxPrice}
-                        // min={sortCardsPrice[0].price}
-                        // max={sortCardsPrice[sortCardsPrice.length].price}
-                    />
-                    {/* <PriceSlider/> */}
-                    {/* <input
-                        type="range"
-                        name="price"
-                        min={0}
-                        max={100}
-                        // onChange={updateFilters}
-                        // min={min_price}
-                        // max={max_price}
-                        // value={price}
-                    /> */}
-                </div>
+            <div className="icon_filter" onClick={showFilters}>
+                <img src={iconFilter} alt='icon-filter'/>
             </div>
+
+            <div className="filters_wrapper">
+                <div className="form-filter range-price-filter">
+                    <h5>Price</h5>
+                    <div className="range_price">
+                        <MultiRangeSlider/>
+                    </div>
+                </div>
+                <div className="form-filter category-filter">
+                <h5>Category</h5>
+                <Categories />
+            </div>
+
+            </div>
+            
+           
 
             {/* <fieldset className="theme-filter">
                 <legend>Theme</legend>
@@ -66,10 +64,7 @@ const Filters: React.FC = () => {
                 </div>
             </fieldset> */}
             
-            <div className="form-filter category-filter">
-                <h5>Category</h5>
-                <Categories />
-            </div>
+
 
             {/* <fieldset className="width-filter">
                 <legend>Width</legend>

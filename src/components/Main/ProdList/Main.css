@@ -141,3 +141,18 @@
     }
 }
 
+@media screen and (max-width: 500px) {
+    .main-filters {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .category-list {
+        margin-left: 0;
+    }
+
+    .wrapper-main {
+        gap: 10px;
+    }
+}
