@@ -11,6 +11,7 @@ import Cart from './components/Main/Cart/Cart';
 import Footer from './components/Footer/Footer';
 
 const App: React.FC = () => {
+  var referrer_url = document.referrer;
   
   return (
     <div className="App">

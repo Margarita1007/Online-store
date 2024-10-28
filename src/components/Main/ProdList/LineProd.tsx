@@ -22,8 +22,8 @@ const Line: React.FC = () => {
             <hr/>
             <p>Sort by</p>
             <select className="sort_list" name="category" value={sortSelect} onChange={event => sort(event.target.value)}>
-                <option id="0" >Price</option>
-                <option id="1" >Default</option>
+                <option id="0" >Default</option>
+                <option id="1" >Price</option>
             </select>
             {/* <button onClick={(e) => sort(e)}>
                 price
